@@ -1,16 +1,39 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="css/skelly.css"/>
 <html>
-  <head>
-    <title>TrevorBanking</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>
+    Trevor banking app || Home page
+  </title>
+  <h1>
+    Hello Jeremiah, Welcome to Trevor Banking
+  </h1>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Stocks</th>
+    <th>Current price</th>
+    <th>stock Owned</th>
+    <th>Current Value</th>
+    <th>buy in price</th>
+    <th>Type of Stock</th>
+  </tr>
+  <tr>
+    <th>
+      <a href="stock.html">
+        Walt Disney Co
+      </a>
+    </th>
+    <th>$89.45</th>
+    <th>2</th>
+    <th>$86.98</th>
+    <th>$85.36</th>
+    <th>Common</th>
+  </tr>
+</table>
+</body>
+<footer>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+</footer>
 </html>

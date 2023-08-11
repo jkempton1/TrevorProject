@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'C:\Users\Jack\Documents\Quarter 4\IntroProj\TrevorProject\TrevorBanking\TrevorProject\app\views\layouts\application.html.erb'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :stocks
+  resources :users
+
 end
