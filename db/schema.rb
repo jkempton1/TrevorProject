@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_15_045149) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_18_014100) do
   create_table "stocks", force: :cascade do |t|
     t.string "stock_name"
     t.decimal "stock_value"
     t.string "stock_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stonks", force: :cascade do |t|
+    t.string "stock_name"
+    t.string "stock_abbreviation"
+    t.string "stock_type"
+    t.decimal "current_price"
+    t.decimal "bought_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,6 +37,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_15_045149) do
     t.string "user_lastname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

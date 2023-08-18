@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @stonk %>
+
+<div>
+  <%= link_to "Edit this stock", edit_stonk_path(@stonk) %> |
+  <%= link_to "Back to stocks", stonks_path %>
+
+  <%= button_to "Destroy this stock", @stonk, method: :delete %>
+</div>

@@ -10,11 +10,24 @@
           <%= link_to 'Home', home_home_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
+          <%= link_to 'Sign up', new_user_registration_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign in', new_user_session_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Edit profile', edit_user_registration_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item">
         	<%= link_to 'Create Account', root_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to 'Stocks', stocks_path, class:"nav-link"%>
         </li>
+      </ul>
       </form>
     </div>
   </div>
