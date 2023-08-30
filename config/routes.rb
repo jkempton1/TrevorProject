@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: "main#index"
 
+  get "currentuser", to: "currentuser#edit"
+  patch "currentuser", to: "currentuser#update"
+  
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
 
