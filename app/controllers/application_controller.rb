@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
     end
 
     def require_user_logged_in!
-        redirect_to sign_in_path, alert: "You must be signed in to view" if Current.user.nil?
+        redirect_to sign_in_path, alert: "You must be signed in to access this page" if Current.user.nil?
+    end
+
+    def require_user_logged_out!
+        if session[:user_id].present?
+        redirect_to root_path, notice: "You are already signed in"
+        end
     end
 end
